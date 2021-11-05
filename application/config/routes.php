@@ -70,7 +70,7 @@ $route['colaborador/editar/(:num)'] = 'colaborador/edit/$1';
 // rota para back end clolaboradores
 $route['colaborador/inserir/(:num)'] = 'colaborador/insert/$1';
 $route['colaborador/atualizar/(:num)'] = 'colaborador/update/$1';
-$route['colaborador/deletar/(:num)'] = 'colaborador/delete/$1';
+$route['colaborador/deletar/(:num)/(:num)'] = 'colaborador/delete/$1/$2';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

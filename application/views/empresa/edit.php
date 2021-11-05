@@ -30,7 +30,7 @@
                                         <div class=" col-lg-3 form-group">
                                             <label>CNPJ</label>
                                             <div>
-                                                <input placeholder="Digite o CNPJ da Empresa" id="cnpj" maxlength="18" value="<?= $cnpj ?>" type="text" name="cnpj" class="form-control input-md" required>
+                                                <input disabled placeholder="Digite o CNPJ da Empresa" id="cnpj" maxlength="18" value="<?= $cnpj ?>" type="text" name="cnpj" class="form-control input-md" required>
                                             </div>
                                         </div>
 

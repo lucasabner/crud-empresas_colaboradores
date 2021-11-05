@@ -100,17 +100,17 @@
                                             <td><?= $item->cpf ?></td>
                                             <td><?= $item->nome; ?></td>
                                             <td><?= $item->email ?></td>
-                                            <td><?= $item->telefone?></td>
+                                            <td><?= $item->telefone ?></td>
                                             <td><?= $item->endereco ?></td>
                                             <td>
                                                 <div class="row">
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-3">
                                                         <form action="<?php echo base_url() ?>colaborador/editar/<?php echo $item->colaborador_id; ?>" method="post">
                                                             <button type="submit" class="btn btn-default"><i class="fa fa-pencil"></i></button>
                                                         </form>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <button type="submit" class="btn btn-danger" onclick="deletar(<?= $item->colaborador_id; ?>)"><i class="fa fa-trash"></i></button>
+                                                    <div class="col-sm-3">
+                                                        <button type="submit" class="btn btn-danger" onclick="deletar(<?= $item->colaborador_id; ?>, <?= $item->empresa_id; ?>)"><i class="fa fa-trash"></i></button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -127,11 +127,11 @@
                                     <?= $this->lang->line('btn-back') ?></button>
                             </form>
                         </div>
-                    </div> 
-                </div> 
-            </section> 
-        </div> 
-    </div> 
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 </body>
 
 <?php $this->load->view('frame/footer_view') ?>
@@ -178,7 +178,7 @@
 </script>
 
 <script type="text/javascript">
-    function deletar(id) {
+    function deletar(id, empresa_id) {
         alertify.confirm('Tem certeza que deseja deletar este Colaborador?').setting({
             'title': "Deletar Colaborador",
             'labels': {
@@ -188,10 +188,8 @@
             'reverseButtons': false,
             'onok': function() {
 
-                $.post("<?php echo base_url() ?>colaborador/deletar/" + id);
-
-                // alertify.success('colaborador Deletada com Sucesso!');
-                // location.reload();
+                $.post("<?php echo base_url() ?>colaborador/deletar/" + id + "/"+ empresa_id);
+                location.reload();
             },
             'oncancel': function() {
                 alertify.error('Colaborador Não Deletado!');

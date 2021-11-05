@@ -6,12 +6,13 @@
     class Colaborador extends CI_Controller
     {
 
+
         public function __Construct()
         {
             parent::__Construct();
 
             $this->load->model('Colaborador_model');
-
+            $this->load->helper('validacao');
         }
 
         public function list($empresa_id)
@@ -49,6 +50,11 @@
         public function insert($empresa_id)
         {
 
+            if (validar($this->input->post('cpf'))) {
+                $this->session->set_flashdata('error', 'Este CPF já esta cadastrado, tente novamente!');
+                redirect('colaborador/cadastrar/' . $empresa_id);
+            }
+
             $colaborador['cpf'] = $this->input->post('cpf');
             $colaborador['nome'] = $this->input->post('nome');
             $colaborador['email'] = $this->input->post('email');
@@ -68,7 +74,7 @@
         }
         public function update($colaborador_id)
         {
-            $colaborador['cpf'] = $this->input->post('cpf');
+
             $colaborador['nome'] = $this->input->post('nome');
             $colaborador['email'] = $this->input->post('email');
             $colaborador['telefone'] = $this->input->post('telefone');
@@ -95,6 +101,18 @@
             } else {
                 $this->session->set_flashdata('delete', 'Falha ao Deletar Colaborador!');
             }
-            redirect('colaboradores/empresa/' .$empresa_id);
+            redirect('colaboradores/empresa/' . $empresa_id);
+        }
+        public function verifica($colaborador_id, $empresa_id)
+        {
+            $query = $this->Colaborador_model->delete($colaborador_id);
+            // confirmação e aviso q vai excluir os colaboradores
+
+            if ($query) {
+                $this->session->set_flashdata('success', 'Colaborador Deletado com sucesso!');
+            } else {
+                $this->session->set_flashdata('delete', 'Falha ao Deletar Colaborador!');
+            }
+            redirect('colaboradores/empresa/' . $empresa_id);
         }
     }

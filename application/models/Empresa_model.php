@@ -23,7 +23,6 @@ class Empresa_model extends CI_Model
 	public function insert($empresa)
 	{
 		return $this->db->insert('empresa', $empresa);
-		
 	}
 
 	public function update($empresa, $empresa_id)
@@ -37,6 +36,6 @@ class Empresa_model extends CI_Model
 		$query1 = $this->Colaborador_model->deleteByEmpresa($empresa_id);
 		$this->db->where('empresa.empresa_id', $empresa_id);
 		$query2 = $this->db->delete('empresa');
-		return $query2;
+		return $query1 && $query2;
 	}
 }

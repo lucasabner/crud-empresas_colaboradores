@@ -32,7 +32,7 @@
                                         <div class=" col-lg-3 form-group">
                                             <label>CPF</label>
                                             <div>
-                                                <input placeholder="Digite o CPF do Colaborador" id="cpf" value="<?= $cpf ?>" type="text" name="cpf" class="form-control input-md" required>
+                                                <input disabled placeholder="Digite o CPF do Colaborador" id="cpf" value="<?= $cpf ?>" type="text" name="cpf" class="form-control input-md" required>
                                             </div>
                                         </div>
 
@@ -53,7 +53,7 @@
                                         <div class="col-lg-3 form-group">
                                             <label>Telefone</label>
                                             <div>
-                                                <input placeholder="Digite o Telefone do Colaborador" id="phone" name="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="<?= $email ?>" type="text" name="email" class="form-control input-md">
+                                                <input placeholder="Digite o Telefone do Colaborador" id="phone" name="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="<?= $telefone ?>" type="text" class="form-control input-md">
                                             </div>
                                         </div>
 

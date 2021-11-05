@@ -1,4 +1,4 @@
-    <?php
+<?php
     if (!defined('BASEPATH')) {
         exit('No direct script access allowed');
     }
@@ -11,9 +11,11 @@
             parent::__Construct();
 
             $this->load->model('Empresa_model');
+            $this->load->helper('validacao');
         }
 
-        public function index(){
+        public function index()
+        {
             redirect("empresas");
         }
 
@@ -50,6 +52,11 @@
         public function insert()
         {
 
+            if (validar($this->input->post('cnpj'))) {
+                $this->session->set_flashdata('error', 'Este CNPJ já esta cadastrado, tente novamente!');
+                redirect('empresa/cadastrar');
+            }
+
             $empresa['cnpj'] = $this->input->post('cnpj');
             $empresa['nome'] = $this->input->post('nome');
             $empresa['email'] = $this->input->post('email');
@@ -68,7 +75,6 @@
         }
         public function update($empresa_id)
         {
-            $empresa['cnpj'] = $this->input->post('cnpj');
             $empresa['nome'] = $this->input->post('nome');
             $empresa['email'] = $this->input->post('email');
             $empresa['telefone'] = $this->input->post('telefone');
@@ -84,7 +90,7 @@
             }
             redirect('empresas');
         }
-        
+
         public function delete($empresa_id)
         {
             $query = $this->Empresa_model->delete($empresa_id);

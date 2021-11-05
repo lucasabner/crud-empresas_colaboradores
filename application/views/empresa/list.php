@@ -189,8 +189,6 @@
             'reverseButtons': false,
             'onok': function() {
                 $.post("<?php echo base_url() ?>empresa/deletar/" + id);
-
-                alertify.success('Empresa Deletada com Sucesso!');
                 location.reload();
             },
             'oncancel': function() {

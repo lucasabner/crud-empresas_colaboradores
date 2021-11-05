@@ -16,9 +16,6 @@
 <script src="<?= base_url() ?>assets/js/fastclick.js"></script>
 <script src="<?= base_url() ?>assets/js/jquery.slimscroll.min.js"></script>
 
-<script src="<?= base_url() ?>assets/js/demo.js"></script>
-
-
 
 
 <script>
@@ -38,36 +35,7 @@ $('.sidebar-toggle').click(function(event) {
 var baseurl = "<?php print base_url(); ?>";
 </script>
 
-<script>
-window.onload = hideLoginErrors();
 
-function hideLoginErrors() {
-    $("#login-empty-input").hide();
-}
-
-function checkEmptyInput() {
-    hideLoginErrors();
-    $("#login-invalid-input").hide();
-    if ($("#email").val() == '' || $("#password").val() == '') {
-        $("#login-empty-input").show();
-        return false;
-    }
-}
-</script>
-
-<!-- ToolTip -->
-<script type="text/javascript">
-$(function() {
-    $('[data-toggle="tooltip"]').tooltip();
-});
-</script>
-
-
-<script>
-$(document).ready(function() {
-    $('.sidebar-menu').tree()
-})
-</script>
 <script>
 //código usando jQuery
 $(document).ready(function() {

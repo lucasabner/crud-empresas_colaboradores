@@ -32,14 +32,13 @@ class Colaborador_model extends CI_Model
 
 	public function delete($colaborador_id)
 	{
-		$this->Colaborador_model->deleteBycolaborador($colaborador_id);
 		$this->db->where('colaborador.colaborador_id', $colaborador_id);
 		return $this->db->delete('colaborador');
 	}
 
 	public function deleteByEmpresa($empresa_id)
 	{
-		$this->db->where_in('colaborador.empresa_id', $empresa_id);
-		return $this->db->delete('colaborator');
+		$this->db->where("colaborador.empresa_id", $empresa_id);
+		return $this->db->delete("colaborador");
 	}
 }
