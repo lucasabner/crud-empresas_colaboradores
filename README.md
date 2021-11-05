@@ -7,7 +7,7 @@
 > + Confirmações de ações de alto impacto (deleção);
 > + Na tabela de visualização de Empresas/Colaboradores é possivel pesquisar por determiandos registros e ordenar os registros clicando no nome da coluna (por padrão esta ordenada por ordem alfabetica de nome).
 > + Menu lateral com Link para Empresas.
-> Observação: O sistema segue o padrão de arquitetura MVC e sua construção buscou seguir o Principo da Rsponsabilidade Única, do acrôninmo SOLID!
+> + Observação: O sistema segue o padrão de arquitetura MVC e sua construção buscou seguir o Principo da Rsponsabilidade Única, do acrôninmo SOLID!
 
 -----------------------
 > # Problemas a serem resolvidos:
