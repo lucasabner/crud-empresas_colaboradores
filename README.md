@@ -5,6 +5,7 @@
 > + Verificação se CNPJ já esta cadastrado;
 > + Feedbacks de ações;
 > + Confirmações de ações de alto impacto (deleção);
+> + Na tabela de visualização de Empresas/Colaboradores é possivel pesquisar por determiandos registros e ordenar os registros clicando no nome da coluna (por padrão esta ordenada por ordem alfabetica de nome).
 > + Menu lateral com Link para Empresas.
 
 -----------------------
