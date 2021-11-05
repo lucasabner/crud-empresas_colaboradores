@@ -51,6 +51,7 @@
 
 > # 2. **Execução Online**:
 - O Sistema esta disponivel no endereço: http://lucasabner.000webhostapp.com
+- Sinta se a vontade para operar no sistema.
 
 -----------------------
 
