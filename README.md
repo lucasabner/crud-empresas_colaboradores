@@ -16,12 +16,12 @@
 > # Telas de Gerenciamento:
 > **Gerenciamento de Empresas**
 <p align="center">
-    <img align="center" width="800" src="https://github.com/lucasabner/laboratorio-virologia/blob/main/print_telas/empresas.PNG" style="max-width:100%;">
+    <img align="center" width="800" src="https://github.com/lucasabner/crud-empresas_colaboradores/blob/main/print_telas/empresas.jpeg" style="max-width:100%;">
 </p>
 
 > **Gerenciamento de Colaboradores**
 <p align="center">
-    <img align="center" width="800" src="https://github.com/lucasabner/laboratorio-virologia/blob/main/exemplo_telas/colaboradores.PNG" style="max-width:100%;">
+    <img align="center" width="800" src="https://github.com/lucasabner/crud-empresas_colaboradores/blob/main/print_telas/colaboradores.jpeg" style="max-width:100%;">
 </p>
 
 
